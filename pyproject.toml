@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "ogis-llm"
+dependencies = [
+    "chromadb>=0.4,<0.5",
+    "langchain>=0.1,<0.2",
+    "langchain_openai>=0.0,<0.1",
+    "neologdn>=0.5,<0.6",
+    "openpyxl>=3.1,<3.2",
+    "python-dotenv>=1.0,<1.1",
+    "seaborn>=0.13,<0.14",
+    "SQLAlchemy>=2.0,<2.1",
+    "streamlit>=1.31,<1.32",
+]
+requires-python = ">=3.10"
+authors = [
+    { name = "Nobuhiko Otoba", email = "otoba@araya.org" },
+    { name = "Keita Kakinuma", email = "keita.kakinuma8931@gmail.com" },
+]
+maintainers = [{ name = "Nobuhiko Otoba", email = "otoba@araya.org" }]
+description = "生成AIを活用したプロジェクト品質管理・要件定義レビュー品質向上 (オージス総研, PJコードIR071)"
+readme = "README.md"
+keywords = [
+    "LLM",
+    "OpenAI",
+    "GPT",
+    "LangChain",
+    "Retrieval Augmented Generation (RAG)",
+    "要件定義",
+    "基本設計",
+    "詳細設計",
+    "単体テスト",
+    "結合テスト",
+    "システムテスト",
+    "品質管理",
+    "ソフトウェアメトリクス",
+    "software metrics",
+    "オージス総研",
+    "OGIS-RI",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipython>=8,<9",
+    "jupyter>=1,<2",
+    "black>=24,<25",
+    "isort>=5,<6",
+    "flake8>=6,<7",
+    "mypy>=1,<2",
+    "pre-commit>=3,<4",
+    "pytest>=7,<8",
+]
+
+[project.urls]
+Repository = "https://github.com/arayabrain/ogis-llm"
