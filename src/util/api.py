@@ -43,10 +43,10 @@ class OpenAIAPIConfig:
     openai_base_url: str | None = None
     openai_org_id: str | None = None
 
-    chat_model_name: str = "gpt-4"
+    chat_model_name: str = "gpt-4o"
     temperature: float = TEMPERAURE
     max_tokens: int = MAX_TOKENS
-    embd_model_name: str = "text-embedding-3-small"
+    embd_model_name: str = "text-embedding-ada-002"
 
     def __post_init__(self):
         if self.openai_api_key is None:
@@ -117,10 +117,10 @@ class AzureOpenAIAPIConfig:
     azure_openai_endpoint: str | None = None
     openai_api_version: str | None = None
 
-    chat_model_name: str = "gpt-4"
+    chat_model_name: str = "gpt-4o"
     temperature: float = TEMPERAURE
     max_tokens: int = MAX_TOKENS
-    embd_model_name: str = "text-embedding-3-small"
+    embd_model_name: str = "text-embedding-ada-002"
 
     def __post_init__(self):
         if self.azure_openai_ad_token is None:

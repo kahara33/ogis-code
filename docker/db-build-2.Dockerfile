@@ -11,7 +11,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # The current directory in the image.
-ARG WORKDIR=/home/araya
+ARG WORKDIR=/home/kahara/ogis
 WORKDIR ${WORKDIR}
 
 # Download dependencies as a separate step to take advantage of Docker's caching.

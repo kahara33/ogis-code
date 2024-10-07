@@ -36,10 +36,10 @@ def test_valid_openai_api_config():
     assert api_config.openai_api_key is not None
     assert api_config.openai_base_url is not None
     # NOTE: api.openai_org_id can be None
-    assert api_config.chat_model_name == "gpt-4"
+    assert api_config.chat_model_name == "gpt-4o"
     assert api_config.temperature == TEMPERAURE
     assert api_config.max_tokens == MAX_TOKENS
-    assert api_config.embd_model_name == "text-embedding-3-small"
+    assert api_config.embd_model_name == "text-embedding-ada-002"
 
 
 @pytest.mark.skipif(
@@ -51,10 +51,10 @@ def test_valid_openai_api():
     assert api.config.openai_api_key is not None
     assert api.config.openai_base_url is not None
     # NOTE: api.config.openai_org_id can be None
-    assert api.config.chat_model_name == "gpt-4"
+    assert api.config.chat_model_name == "gpt-4o"
     assert api.config.temperature == TEMPERAURE
     assert api.config.max_tokens == MAX_TOKENS
-    assert api.config.embd_model_name == "text-embedding-3-small"
+    assert api.config.embd_model_name == "text-embedding-ada-002"
 
 
 @pytest.mark.skip(reason="Araya TODO: Azure OpenAI API verification is incomplete.")
